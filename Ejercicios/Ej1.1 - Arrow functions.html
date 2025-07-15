@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1.1: Arrow functions</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
 </head>
+
 <body>
+    <pre>
+        <code class="language-javascript">
+            //Ejercicio 1
+            const add = (a, b) =&gt; {
+                return a + b
+            }
+
+            console.log("Ej 1:", add(1, 4))
+        </code>
+    </pre>
+
+    <pre>
+        <code class="language-javascript">
+            //Ejercicio 2
+            const randomNumber = () => Math.floor(Math.random() * 101)
+
+            console.log("Ej 2:", randomNumber())
+        </code>
+    </pre>
+
+    <pre>
+        <code class="language-javascript">
+            //Ejercicio 3
+            class Person {
+                constructor(name) {
+                    this.name = name
+                }
+
+                greet = () => {
+                    console.log(`Ej 3: Hola, ${this.name}`)
+                }
+            }
+
+            const persona = new Person("Kevin")
+            persona.greet()
+        </code>
+    </pre>
+
+    <pre>
+        <code class="language-javascript">
+            //Ejercicio 4
+            const printNumbers = numbers => {
+                for (let i = 0; i < numbers.length; i++) {
+                    const print = () => {
+                        console.log(numbers[i])
+                    }
+
+                    print()
+                }
+            }
+
+            console.log("Ej 4:")
+            printNumbers([10, 20, 30])
+        </code>
+    </pre>
+
+    <pre>
+        <code class="language-javascript">
+            //Ejercicio 5
+            const delayedMessage = () => {
+                setTimeout(() => {
+                    console.log("Ej 5: Este es un mensaje que aparecerá después de 3 segundos");
+                }, 3000)
+            }
+
+            delayedMessage()
+        </code>
+    </pre>
+
+    <div class="buttons">
+        <a href="../index.html">Inicio</a>
+        <a href="Ej1.2 - Operador ternario.html">Siguiente</a>
+    </div>
+
+    <!-- Highlight.js core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Cargar lenguaje JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script src="../JS/Ej1.1.js"></script>
 </body>
+
 </html>

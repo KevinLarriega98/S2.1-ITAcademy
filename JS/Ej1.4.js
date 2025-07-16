@@ -13,7 +13,6 @@ const suma = (...numeros) => {
 
 console.log("Ej 2:", suma(1, 2, 3, 4, 5))
 
-
 //Ejercicio 3
 const objecte1 = {
     nombre: "Kevin",

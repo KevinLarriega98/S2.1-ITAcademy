@@ -1,6 +1,6 @@
 //Ejercicio 1
 const add = (a, b) => {
-    return a + b
+  return a + b
 }
 
 console.log("Ej 1:", add(1, 4))

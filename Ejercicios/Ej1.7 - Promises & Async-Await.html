@@ -1,11 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1.7: Promises & Async/Await</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
 </head>
+
 <body>
+    <h1>Ejercicio 1.7: Promises & Async/Await</h1>
+
+    <pre>
+        <code class="language-javascript">
+            //Ejercicio 1
+            const esperarSaludo = () => {
+                return new Promise(resolve => {
+                    setTimeout(() => resolve("Hola, món"), 2000)
+                })
+            }
+        </code>
+    </pre>
+
+    <pre>
+        <code class="language-javascript">
+            //Ejercicio 2
+            esperarSaludo().then(mensaje => {
+                console.log("Ej 2:", mensaje)
+            })
+        </code>
+    </pre>
+
+    <pre>
+        <code class="language-javascript">
+            //Ejercicio 3
+            const saludo = (texto) => {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        if (texto === 'Hola') {
+                            resolve(texto)
+                        } else {
+                            reject("Esto no es un saludo")
+                        }
+                    }, 2000)
+                })
+            }
+
+            saludo('Hola')
+                .then(mensaje => {
+                    console.log("Ej 3:", mensaje)
+                })
+                .catch(error => {
+                    console.error("Ej 3 - Error:", error)
+                })
+        </code>
+    </pre>
+
+    <pre>
+        <code class="language-javascript">
+            //Ejercicio 4
+            async function mostrarSaludoAsync() {
+                const mensaje = await esperarSaludo()
+                console.log("Ej 4:", mensaje)
+            }
+
+            mostrarSaludoAsync()
+        </code>
+    </pre>
+
+    <pre>
+        <code class="language-javascript">
+            //Ejercicio 5
+            async function mostrarSaludoAsyncTryCatch() {
+                try {
+                    const mensaje = await esperarSaludo()
+                    console.log("Ej 5:", mensaje)
+                } catch (error) {
+                    console.error("Ej 5 - Error:", error.message)
+                }
+            }
+
+            mostrarSaludoAsyncTryCatch()
+        </code>
+    </pre>
+
+    <pre>
+        <code class="language-javascript">
+            //Ejercicio 6
+            const promesa1 = new Promise(resolve => {
+                setTimeout(() => resolve("Promesa 1 dice hola"), 2000)
+            })
+
+            const promesa2 = new Promise(resolve => {
+                setTimeout(() => resolve("Promesa 2 dice adiós"), 3000)
+            })
+
+            Promise.all([promesa1, promesa2])
+                .then(res => {
+                    console.log("Ej 6:", res)
+                })
+                .catch(error => {
+                    console.error("Ej 6 - Error:", error)
+                })
+        </code>
+    </pre>
+
+    <div class="buttons">
+        <a href="Ej1.6 - Array loops.html">Anterior</a>
+        <a href="../index.html">Inicio</a>
+    </div>
+
+    <!-- Highlight.js core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Cargar lenguaje JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script src="../JS/Ej1.7.js"></script>
 </body>
+
 </html>

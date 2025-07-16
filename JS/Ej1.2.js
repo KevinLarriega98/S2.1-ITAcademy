@@ -14,7 +14,7 @@ console.log("Ej 2", numMesGran(10, 50))
 const tipusNum = num =>
   num > 0 ? 'Positiu' :
   num < 0 ? 'Negatiu' :
-  'Zero'
+    'Zero'
 
 console.log("Ej 3.1:", tipusNum(1))
 console.log("Ej 3.1:", tipusNum(-1))

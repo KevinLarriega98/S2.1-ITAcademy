@@ -2,6 +2,17 @@
 
 This repository contains the JavaScript exercises required for Sprint #2 of ITACADEMY.
 
+## 🚀 Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/KevinLarriega98/S2.1-ITAcademy.git
+cd S2.1-ITAcademy
+```
+
+---
+
 ## 📁 Repository Structure
 
 HTML files and JavaScript files are implemented in separate folders.

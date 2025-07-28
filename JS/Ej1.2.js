@@ -30,7 +30,7 @@ console.log("Ej 3.2 (b):", trobarMaxim(50, 100, 3))
 console.log("Ej 3.2 (c):", trobarMaxim(50, 10, 300))
 
 //Ejercicio 4
-const printNumbers = numeros => {
+const parOImpar = numeros => {
   for (let i = 0; i < numeros.length; i++) {
     console.log(numeros[i] % 2 === 0 ? 'És parell' : 'És imparell')
   }

@@ -4,73 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 1.6: Array loops</title>
+    <title>Exercise 1.6: Array loops</title>
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
 </head>
 
 <body>
-    <h1>Ejercicio 1.6: Array loops</h1>
+    <h1>Exercise 1.6: Array loops</h1>
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 1
-            let noms = ['Anna', 'Bernat', 'Clara']
+            //Exercise 1
+            let names = ['Anna', 'Bernat', 'Clara']
 
-            console.log("Ej 1:")
-            noms.forEach((nom) => console.log(nom))
+            console.log("Exercise 1:")
+            names.forEach((name) => console.log(name))
         </code>
     </pre>
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 2
-            let noms = ['Anna', 'Bernat', 'Clara']
+            //Exercise 2
+            let names = ['Anna', 'Bernat', 'Clara']
 
-            console.log("Ej 2:")
-            for (const nom of noms) {
-                console.log(nom)
+            console.log("Exercise 2:")
+            for (const name of names) {
+                console.log(name)
             }
         </code>
     </pre>
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 3
-            let numeros = [1, 2, 3, 4, 5, 6]
+            //Exercise 3
+            let numbers = [1, 2, 3, 4, 5, 6]
 
-            const parells = numeros.filter(n => n % 2 === 0)
+            const evenNumbers = numbers.filter(n => n % 2 === 0)
 
-            console.log("Ej 3: ", parells)
+            console.log("Exercise 3: ", evenNumbers)
         </code>
     </pre>
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 4
-            let obj = {
-                nom: 'Ona',
-                edat: 25,
-                ciutat: 'Barcelona'
+            //Exercise 4
+            let person = {
+                name: 'Ona',
+                age: 25,
+                city: 'Barcelona'
             }
 
-            console.log("Ej 4:")
-            for (const propietat in obj) {
-                console.log(`${propietat}: ${obj[propietat]}`);
+            console.log("Exercise 4:")
+            for (const key in person) {
+                console.log(`${key}: ${person[key]}`);
             }
         </code>
     </pre>
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 5
-            let numeros = [1, 2, 3, 4, 5, 6]
+            //Exercise 5
+            let numbers = [1, 2, 3, 4, 5, 6]
 
-            console.log("Ej 5:")
-            for (const numero of numeros) {
-                console.log(numero)
-                if (numero === 5) {
+            console.log("Exercise 5:")
+            for (const number of numbers) {
+                console.log(number)
+                if (number === 5) {
                     break
                 }
             }
@@ -79,20 +79,20 @@
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 6
-            let noms = ['Anna', 'Bernat', 'Clara']
+            //Exercise 6
+            let names = ['Anna', 'Bernat', 'Clara']
             
-            console.log("Ej 6:")
-            for (const [index, nom] of noms.entries()) {
-                console.log(index, nom)
+            console.log("Exercise 6:")
+            for (const [index, name] of names.entries()) {
+                console.log(index, name)
             }
         </code>
     </pre>
 
     <div class="buttons">
-        <a href="ej1_5-array-transformations.html">Anterior</a>
-        <a href="../index.html">Inicio</a>
-        <a href="ej1_7-promises-&-async-await.html">Siguiente</a>
+        <a href="ej1_5-array-transformations.html">Previous</a>
+        <a href="../index.html">Home</a>
+        <a href="ej1_7-promises-&-async-await.html">Next</a>
     </div>
 
     <!-- Highlight.js core -->

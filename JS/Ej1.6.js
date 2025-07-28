@@ -1,44 +1,44 @@
-let noms = ['Anna', 'Bernat', 'Clara']
-let numeros = [1, 2, 3, 4, 5, 6]
+let names = ['Anna', 'Bernat', 'Clara']
+let numbers = [1, 2, 3, 4, 5, 6]
 
-//Ejercicio 1
-console.log("Ej 1:")
-noms.forEach((nom) => console.log(nom))
+//Exercise 1
+console.log("Exercise 1:")
+names.forEach((name) => console.log(name))
 
-//Ejercicio 2
-console.log("Ej 2:")
-for (const nom of noms) {
-    console.log(nom)
+//Exercise 2
+console.log("Exercise 2:")
+for (const name of names) {
+    console.log(name)
 }
 
-//Ejercicio 3
-const parells = numeros.filter(n => n % 2 === 0)
+//Exercise 3
+const evenNumbers = numbers.filter(n => n % 2 === 0)
 
-console.log("Ej 3: ", parells)
+console.log("Exercise 3: ", evenNumbers)
 
-//Ejercicio 4
-let obj = {
-    nom: 'Ona',
-    edat: 25,
-    ciutat: 'Barcelona'
+//Exercise 4
+let person = {
+    name: 'Ona',
+    age: 25,
+    city: 'Barcelona'
 }
 
-console.log("Ej 4:")
-for (const propietat in obj) {
-    console.log(`${propietat}: ${obj[propietat]}`);
+console.log("Exercise 4:")
+for (const key in person) {
+    console.log(`${key}: ${person[key]}`);
 }
 
-//Ejercicio 5
-console.log("Ej 5:")
-for (const numero of numeros) {
-    console.log(numero)
-    if (numero === 5) {
+//Exercise 5
+console.log("Exercise 5:")
+for (const number of numbers) {
+    console.log(number)
+    if (number === 5) {
         break
     }
 }
 
-//Ejercicio 6
-console.log("Ej 6:")
-for (const [index, nom] of noms.entries()) {
-    console.log(index, nom)
+//Exercise 6
+console.log("Exercise 6:")
+for (const [index, name] of names.entries()) {
+    console.log(index, name)
 }

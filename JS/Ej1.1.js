@@ -1,30 +1,30 @@
-//Ejercicio 1
+//Exercise 1
 const add = (a, b) => {
   return a + b
 }
 
-console.log("Ej 1:", add(1, 4))
+console.log("Exercise 1:", add(1, 4))
 
-//Ejercicio 2
+//Exercise 2
 const randomNumber = () => Math.floor(Math.random() * 101)
 
-console.log("Ej 2:", randomNumber())
+console.log("Exercise 2:", randomNumber())
 
-//Ejercicio 3
+//Exercise 3
 class Person {
   constructor(name) {
     this.name = name
   }
 
   greet = () => {
-    console.log(`Ej 3: Hola, ${this.name}`)
+    console.log(`Exercise 3: Hello, ${this.name}`)
   }
 }
 
-const persona = new Person("Kevin")
-persona.greet()
+const person = new Person("Kevin")
+person.greet()
 
-//Ejercicio 4
+//Exercise 4
 const printNumbers = numbers => {
   for (let i = 0; i < numbers.length; i++) {
     const print = () => {
@@ -35,13 +35,13 @@ const printNumbers = numbers => {
   }
 }
 
-console.log("Ej 4:")
+console.log("Exercise 4:")
 printNumbers([10, 20, 30])
 
-//Ejercicio 5
+//Exercise 5
 const delayedMessage = () => {
   setTimeout(() => {
-    console.log("Ej 5: Este es un mensaje que aparecerá después de 3 segundos");
+    console.log("Exercise 5: This message will appear after 3 seconds")
   }, 3000)
 }
 

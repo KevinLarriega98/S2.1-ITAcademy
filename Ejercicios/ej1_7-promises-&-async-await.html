@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 1.7: Promises & Async/Await</title>
+    <title>Exercise 1.7: Promises & Async/Await</title>
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
 </head>
 
 <body>
-    <h1>Ejercicio 1.7: Promises & Async/Await</h1>
+    <h1>Exercise 1.7: Promises & Async/Await</h1>
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 1
-            const esperarSaludo = () => {
+            //Exercise 1
+            const waitForGreeting = () => {
                 return new Promise(resolve => {
-                    setTimeout(() => resolve("Hola, món"), 2000)
+                    setTimeout(() => resolve("Hello, world"), 2000)
                 })
             }
         </code>
@@ -26,90 +26,90 @@
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 2
-            esperarSaludo().then(mensaje => {
-                console.log("Ej 2:", mensaje)
+            //Exercise 2
+            waitForGreeting().then(message => {
+                console.log("Exercise 2:", message)
             })
         </code>
     </pre>
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 3
-            const saludo = (texto) => {
+            //Exercise 3
+            const greeting = (text) => {
                 return new Promise((resolve, reject) => {
                     setTimeout(() => {
-                        if (texto === 'Hola') {
-                            resolve(texto)
+                        if (text === 'Hello') {
+                            resolve(text)
                         } else {
-                            reject("Esto no es un saludo")
+                            reject("This is not a valid greeting")
                         }
                     }, 2000)
                 })
             }
 
-            saludo('Hola')
-                .then(mensaje => {
-                    console.log("Ej 3:", mensaje)
+            greeting('Hello')
+                .then(message => {
+                    console.log("Exercise 3:", message)
                 })
                 .catch(error => {
-                    console.error("Ej 3 - Error:", error)
+                    console.error("Exercise 3 - Error:", error)
                 })
         </code>
     </pre>
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 4
-            async function mostrarSaludoAsync() {
-                const mensaje = await esperarSaludo()
-                console.log("Ej 4:", mensaje)
+            //Exercise 4
+            async function mostrargreetingAsync() {
+                const message = await waitForGreeting()
+                console.log("Exercise 4:", message)
             }
 
-            mostrarSaludoAsync()
+            mostrargreetingAsync()
         </code>
     </pre>
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 5
-            async function mostrarSaludoAsyncTryCatch() {
+            //Exercise 5
+            async function showGreetingAsyncTryCatch() {
                 try {
-                    const mensaje = await esperarSaludo()
-                    console.log("Ej 5:", mensaje)
+                    const message = await waitForGreeting()
+                    console.log("Ej 5:", message)
                 } catch (error) {
-                    console.error("Ej 5 - Error:", error.message)
+                    console.error("Exercise 5 - Error:", error.message)
                 }
             }
 
-            mostrarSaludoAsyncTryCatch()
+            showGreetingAsyncTryCatch()
         </code>
     </pre>
 
     <pre>
         <code class="language-javascript">
-            //Ejercicio 6
-            const promesa1 = new Promise(resolve => {
-                setTimeout(() => resolve("Promesa 1 dice hola"), 2000)
+            //Exercise 6
+            const promise1 = new Promise(resolve => {
+                setTimeout(() => resolve("Promise 1 says Hello"), 2000)
             })
 
-            const promesa2 = new Promise(resolve => {
-                setTimeout(() => resolve("Promesa 2 dice adiós"), 3000)
+            const promise2 = new Promise(resolve => {
+                setTimeout(() => resolve("Promise 2 says adiós"), 3000)
             })
 
-            Promise.all([promesa1, promesa2])
+            Promise.all([promise1, promise2])
                 .then(res => {
-                    console.log("Ej 6:", res)
+                    console.log("Exercise 6:", res)
                 })
                 .catch(error => {
-                    console.error("Ej 6 - Error:", error)
+                    console.error("Exercise 6 - Error:", error)
                 })
         </code>
     </pre>
 
     <div class="buttons">
-        <a href="ej1_6-array-loops.html">Anterior</a>
-        <a href="../index.html">Inicio</a>
+        <a href="ej1_6-array-loops.html">Previous</a>
+        <a href="../index.html">Home</a>
     </div>
 
     <!-- Highlight.js core -->

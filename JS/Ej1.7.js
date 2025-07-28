@@ -1,69 +1,69 @@
-//Ejercicio 1
-const esperarSaludo = () => {
+//Exercise 1
+const waitForGreeting = () => {
     return new Promise(resolve => {
-        setTimeout(() => resolve("Hola, món"), 2000)
+        setTimeout(() => resolve("Hello, world"), 2000)
     })
 }
 
-//Ejercicio 2
-esperarSaludo().then(mensaje => {
-    console.log("Ej 2:", mensaje)
+//Exercise 2
+waitForGreeting().then(message => {
+    console.log("Exercise 2:", message)
 })
 
-//Ejercicio 3
-const saludo = (texto) => {
+//Exercise 3
+const greeting = (text) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (texto === 'Hola') {
-                resolve(texto)
+            if (text === 'Hello') {
+                resolve(text)
             } else {
-                reject("Esto no es un saludo")
+                reject("This is not a valid greeting")
             }
         }, 2000)
     })
 }
 
-saludo('Hola')
-    .then(mensaje => {
-        console.log("Ej 3:", mensaje)
+greeting('Hello')
+    .then(message => {
+        console.log("Exercise 3:", message)
     })
     .catch(error => {
-        console.error("Ej 3 - Error:", error)
+        console.error("Exercise 3 - Error:", error)
     })
 
-//Ejercicio 4
-async function mostrarSaludoAsync() {
-    const mensaje = await esperarSaludo()
-    console.log("Ej 4:", mensaje)
+//Exercise 4
+async function mostrargreetingAsync() {
+    const message = await waitForGreeting()
+    console.log("Exercise 4:", message)
 }
 
-mostrarSaludoAsync()
+mostrargreetingAsync()
 
-//Ejercicio 5
-async function mostrarSaludoAsyncTryCatch() {
+//Exercise 5
+async function showGreetingAsyncTryCatch() {
     try {
-        const mensaje = await esperarSaludo()
-        console.log("Ej 5:", mensaje)
+        const message = await waitForGreeting()
+        console.log("Exercise 5:", message)
     } catch (error) {
-        console.error("Ej 5 - Error:", error.message)
+        console.error("Exercise 5 - Error:", error.message)
     }
 }
 
-mostrarSaludoAsyncTryCatch()
+showGreetingAsyncTryCatch()
 
-//Ejercicio 6
-const promesa1 = new Promise(resolve => {
-    setTimeout(() => resolve("Promesa 1 dice hola"), 2000)
+//Exercise 6
+const promise1 = new Promise(resolve => {
+    setTimeout(() => resolve("Promise 1 says Hello"), 2000)
 })
 
-const promesa2 = new Promise(resolve => {
-    setTimeout(() => resolve("Promesa 2 dice adiós"), 3000)
+const promise2 = new Promise(resolve => {
+    setTimeout(() => resolve("Promise 2 says adiós"), 3000)
 })
 
-Promise.all([promesa1, promesa2])
+Promise.all([promise1, promise2])
     .then(res => {
-        console.log("Ej 6:", res)
+        console.log("Exercise 6:", res)
     })
     .catch(error => {
-        console.error("Ej 6 - Error:", error)
+        console.error("Exercise 6 - Error:", error)
     })

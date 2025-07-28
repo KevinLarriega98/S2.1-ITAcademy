@@ -1,63 +1,63 @@
-//Ejercicio 1
+//Exercise 1
 const array1 = [10, 20, 30]
 const array2 = [40, 50, 60]
 
 const array3 = [...array1, ...array2]
 
-console.log("Ej 1:", array3)
+console.log("Exercise 1:", array3)
 
-//Ejercicio 2
-const suma = (...numeros) => {
-    return numeros.reduce((acum, num) => acum + num, 0)
+//Exercise 2
+const sum = (...numbers) => {
+    return numbers.reduce((acum, num) => acum + num, 0)
 }
 
-console.log("Ej 2:", suma(1, 2, 3, 4, 5))
+console.log("Exercise 2:", sum(1, 2, 3, 4, 5))
 
-//Ejercicio 3
-const objecte1 = {
-    nombre: "Kevin",
-    edad: 27
+//Exercise 3
+const originalPerson = {
+    name: "Kevin",
+    age: 27
 }
 
-const objecte2 = {...objecte1}
-objecte2.nombre = "André"
+const copiedPerson = {...originalPerson}
+copiedPerson.name = "André"
 
-console.log("Ej 3 - Objecte 1", objecte1)
-console.log("Ej 3 - Objecte 2", objecte2)
+console.log("Exercise 3 - Original person", originalPerson)
+console.log("Exercise 3 - Copied person", copiedPerson)
 
-//Ejercicio 4
+//Exercise 4
 const myArray = ["Kevin", 27, true]
 
-const [nombre, edad, ...resto] = myArray
+const [name, age, ...rest] = myArray
 
-console.log("Ej 4:")
-console.log(nombre)
-console.log(edad)
-console.log(resto)
+console.log("Exercise 4:")
+console.log(name)
+console.log(age)
+console.log(rest)
 
-//Ejercicio 5
-const mostrarTres = (a, b, c) => {
+//Exercise 5
+const showThree = (a, b, c) => {
     console.log(a)
     console.log(b)
     console.log(c)
 }
 
-const arrayTresElementos = [10, 20, 30]
+const threeElementArray = [10, 20, 30]
 
-console.log("Ej 5:")
-mostrarTres(...arrayTresElementos)
+console.log("Exercise 5:")
+showThree(...threeElementArray)
 
-//Ejercicio 6
-const obj1 = {
-    nombre: "Kevin",
-    apellido: "Larriega"
+//Exercise 6
+const person = {
+    name: "Kevin",
+    lastName: "Larriega"
 }
 
-const obj2 = {
-    edad: 27,
-    genero: "Masculino"
+const additionalData = {
+    age: 27,
+    genre: "Male"
 }
 
-const obj3 = {...obj1, ...obj2}
+const fullPerson = {...person, ...additionalData}
 
-console.log("Ej 6:", obj3)
+console.log("Exercise 6:", fullPerson)

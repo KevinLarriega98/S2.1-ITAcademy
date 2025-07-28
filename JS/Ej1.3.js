@@ -1,59 +1,59 @@
-//Ejercicio 1
-const processar = (num, callback) => {
+//Exercise 1
+const process = (num, callback) => {
     callback(num)
 }
 
-const mostrarDoble = num => {
-    console.log("Ej 1:", num * 2)
+const showDouble = num => {
+    console.log("Exercise 1:", num * 2)
 }
 
-processar(5, mostrarDoble)
+process(5, showDouble)
 
-//Ejercicio 2
-const calculadora = (num1, num2, callback) => {
+//Exercise 2
+const calculator = (num1, num2, callback) => {
     callback(num1, num2)
 }
 
-const sumaNumeros = (num1, num2) => {
-    console.log("Ej 2:", num1 + num2)
+const sumNumbers = (num1, num2) => {
+    console.log("Exercise 2:", num1 + num2)
 }
 
-calculadora(1, 4, sumaNumeros)
+calculator(1, 4, sumNumbers)
 
-//Ejercicio 3
-const esperarISaludar = (nom, callback) => {
+//Exercise 3
+const waitAndGreet = (name, callback) => {
     setTimeout(() => {
-        callback(nom)
+        callback(name)
     }, 2000)
 }
 
-const saludar = nom => {
-    console.log("Ej 3:", `Hola, ${nom}`)
+const greet = name => {
+    console.log("Exercise 3:", `Hello, ${name}`)
 }
 
-esperarISaludar("Kevin", saludar)
+waitAndGreet("Kevin", greet)
 
-//Ejercicio 4
-const processarElements = (array, callback) => {
+//Exercise 4
+const processElements = (array, callback) => {
     for (let i = 0; i < array.length; i++) {
         callback(array[i])
     }
 }
 
-const iterarArray = array => {
+const iterateArray = array => {
     console.log(array)
 }
 
-console.log("Ej 4:")
-processarElements([1, 2, 3], iterarArray)
+console.log("Exercise 4:")
+processElements([1, 2, 3], iterateArray)
 
-//Ejercicio 5
-const processarCadena = (cadena, callback) => {
-    callback(cadena.toUpperCase())
+//Exercise 5
+const processString = (string, callback) => {
+    callback(string.toUpperCase())
 }
 
-const cadenaTransformada = cadena => {
-    console.log("Ej 5:", cadena)
+const transformedString = string => {
+    console.log("Exercise 5:", string)
 }
 
-processarCadena("kevin", cadenaTransformada)
+processString("kevin", transformedString)

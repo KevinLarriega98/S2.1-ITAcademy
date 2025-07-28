@@ -42,6 +42,12 @@ cd S2.1-ITAcademy
 
 ---
 
+### 📸  Preview
+
+![Preview](Preview.gif)
+
+---
+
 ## 📚 Topics & Objectives
 
 ### **1.1 – Arrow Functions**

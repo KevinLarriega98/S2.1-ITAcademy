@@ -1,6 +1,28 @@
 # 📘 JavaScript Basics – Exercises
 
-This repository contains the JavaScript exercises required for Sprint #2 of ITACADEMY.
+This project contains a collection of JavaScript exercises developed during Sprint #2 at ITACADEMY. The exercises focus on core JavaScript concepts such as arrow functions, ternary operators, callbacks, array methods, loops, and asynchronous programming. Each function is implemented in its own file and structured to be reusable, modular, and testable.
+
+---
+
+## 🎯 Learning Objectives
+
+This project aims to:
+
+- Reinforce foundational JavaScript skills through practical exercises.
+- Apply functional programming techniques using `map`, `filter`, `reduce`, etc.
+- Practice clean and modular code organization.
+- Work with asynchronous logic using `Promises` and `async/await`.
+- Gain confidence in writing and understanding testable, maintainable JavaScript functions.
+
+---
+
+## 💻 Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+---
 
 ## 🚀 Getting Started
 
@@ -13,10 +35,10 @@ cd S2.1-ITAcademy
 
 ---
 
-## 📁 Repository Structure
+## 🗂️ Project Structure & Usage
 
-HTML files and JavaScript files are implemented in separate folders.
-- 🛠 All exercises include `console.log()` for testing and must be inspected using the browser console.
+- HTML and JavaScript files are organized in separate folders.
+- To view and test the exercises, open any `.html` file in your browser (double-click or right-click → “Open with”).
 
 ---
 

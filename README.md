@@ -48,6 +48,10 @@ cd S2.1-ITAcademy
 
 ---
 
+## 📚 Topics Covered (Quick Overview)
+
+Arrow Functions, Ternary Operators, Callbacks, Spread & Rest Operators, Array Methods, Loops, Promises & Async/Await.
+
 ## 📚 Topics & Objectives
 
 ### **1.1 – Arrow Functions**

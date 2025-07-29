@@ -7,12 +7,12 @@ names.forEach((name) => console.log(name))
 
 //Exercise 2
 console.log("Exercise 2:")
-for (const name of names) {
+for (let name of names) {
     console.log(name)
 }
 
 //Exercise 3
-const evenNumbers = numbers.filter(n => n % 2 === 0)
+let evenNumbers = numbers.filter(n => n % 2 === 0)
 
 console.log("Exercise 3: ", evenNumbers)
 
@@ -24,13 +24,13 @@ let person = {
 }
 
 console.log("Exercise 4:")
-for (const key in person) {
+for (let key in person) {
     console.log(`${key}: ${person[key]}`);
 }
 
 //Exercise 5
 console.log("Exercise 5:")
-for (const number of numbers) {
+for (let number of numbers) {
     console.log(number)
     if (number === 5) {
         break
@@ -39,6 +39,6 @@ for (const number of numbers) {
 
 //Exercise 6
 console.log("Exercise 6:")
-for (const [index, name] of names.entries()) {
+for (let [index, name] of names.entries()) {
     console.log(index, name)
 }

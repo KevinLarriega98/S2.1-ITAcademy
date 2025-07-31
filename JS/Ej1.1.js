@@ -1,9 +1,18 @@
 //Exercise 1
 const add = (a, b) => {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new TypeError("Both arguments must be numbers")
+  }
+  
   return a + b
 }
 
-console.log("Exercise 1:", add(1, 4))
+try {
+  console.log("Exercise 1:", add(1, 4))
+  console.log("Exercise 1:", add(1))
+} catch (error) {
+  console.error("Exercise 1 - Error:", error.message)
+}
 
 //Exercise 2
 const randomNumber = () => Math.floor(Math.random() * 101)
@@ -26,17 +35,26 @@ person.greet()
 
 //Exercise 4
 const printNumbers = numbers => {
+  if (!Array.isArray(numbers)) {
+    throw new TypeError("Input must be an array")
+  }
+
   for (let i = 0; i < numbers.length; i++) {
-    const print = () => {
-      console.log(numbers[i])
+    if (typeof numbers[i] !== 'number') {
+      throw new TypeError(`Element at index ${i} is not a number`)
     }
 
-    print()
+    console.log(numbers[i])
   }
 }
 
-console.log("Exercise 4:")
-printNumbers([10, 20, 30])
+try {
+  console.log("Exercise 4:")
+  printNumbers([10, 20, 30])
+  printNumbers(["10", true, 30])
+} catch (error) {
+  console.error("Exercise 4 - Error:", error.message)
+}
 
 //Exercise 5
 const delayedMessage = () => {

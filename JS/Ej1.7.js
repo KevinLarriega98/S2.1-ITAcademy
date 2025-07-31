@@ -6,9 +6,13 @@ const waitForGreeting = () => {
 }
 
 //Exercise 2
-waitForGreeting().then(message => {
-    console.log("Exercise 2:", message)
-})
+waitForGreeting()
+    .then(message => {
+        console.log("Exercise 2:", message)
+    })
+    .catch(error => {
+        console.error("Exercise 2 - Error:", error)
+    })
 
 //Exercise 3
 const greeting = (text) => {
@@ -33,8 +37,12 @@ greeting('Hello')
 
 //Exercise 4
 async function mostrargreetingAsync() {
-    const message = await waitForGreeting()
-    console.log("Exercise 4:", message)
+    try {
+        const message = await waitForGreeting()
+        console.log("Exercise 4:", message)
+    } catch (error) {
+        console.error("Exercise 4 - Error:", error.message)
+    }
 }
 
 mostrargreetingAsync()
@@ -53,11 +61,11 @@ showGreetingAsyncTryCatch()
 
 //Exercise 6
 const promise1 = new Promise(resolve => {
-    setTimeout(() => resolve("Promise 1 says Hello"), 2000)
+    setTimeout(() => resolve("Promise 1 says hello"), 2000)
 })
 
 const promise2 = new Promise(resolve => {
-    setTimeout(() => resolve("Promise 2 says adiós"), 3000)
+    setTimeout(() => resolve("Promise 2 says goodbye"), 3000)
 })
 
 Promise.all([promise1, promise2])

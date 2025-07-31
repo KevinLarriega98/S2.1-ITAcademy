@@ -27,9 +27,13 @@
     <pre>
         <code class="language-javascript">
             //Exercise 2
-            waitForGreeting().then(message => {
-                console.log("Exercise 2:", message)
-            })
+            waitForGreeting()
+                .then(message => {
+                    console.log("Exercise 2:", message)
+                })
+                .catch(error => {
+                    console.error("Exercise 2 - Error:", error)
+                })
         </code>
     </pre>
 
@@ -62,8 +66,12 @@
         <code class="language-javascript">
             //Exercise 4
             async function mostrargreetingAsync() {
-                const message = await waitForGreeting()
-                console.log("Exercise 4:", message)
+                try {
+                    const message = await waitForGreeting()
+                    console.log("Exercise 4:", message)
+                } catch (error) {
+                    console.error("Exercise 4 - Error:", error.message)
+                }
             }
 
             mostrargreetingAsync()
@@ -76,7 +84,7 @@
             async function showGreetingAsyncTryCatch() {
                 try {
                     const message = await waitForGreeting()
-                    console.log("Ej 5:", message)
+                    console.log("Exercise 5:", message)
                 } catch (error) {
                     console.error("Exercise 5 - Error:", error.message)
                 }
@@ -90,11 +98,11 @@
         <code class="language-javascript">
             //Exercise 6
             const promise1 = new Promise(resolve => {
-                setTimeout(() => resolve("Promise 1 says Hello"), 2000)
+                setTimeout(() => resolve("Promise 1 says hello"), 2000)
             })
 
             const promise2 = new Promise(resolve => {
-                setTimeout(() => resolve("Promise 2 says adiós"), 3000)
+                setTimeout(() => resolve("Promise 2 says goodbye"), 3000)
             })
 
             Promise.all([promise1, promise2])
